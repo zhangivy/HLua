@@ -6,10 +6,12 @@
 //  Copyright (c) 2015年 HSoul. All rights reserved.
 //
 
-#include <iostream>
+#include "DesignTest.h"
+#include "LuaTest.h"
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+int main(int argc, const char * argv[])
+{
+    // luaEnter();
+    DesignModelEnter();
     return 0;
 }
