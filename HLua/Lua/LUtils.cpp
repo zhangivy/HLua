@@ -6,7 +6,6 @@
 //  Copyright (c) 2015年 HSoul. All rights reserved.
 //
 
-#include "LUtils.h"
 #include "lua.hpp"
 #include <string.h>
 
@@ -110,3 +109,44 @@ void LUtils::loadManaulLibrary(lua_State *ls, const std::map<const char *, lua_r
     }
 }
 
+void LUtils::stackDump(lua_State *ls)
+{
+    printf("\n/**** begin dump lua stack ****/\n\n");
+    int i = 0;
+    
+    // 获取栈顶元素的索引，索引从 1 开始
+    int topIndex = lua_gettop(ls);
+    
+    for(i = topIndex; i >= 1; i--)
+    {
+        int type = lua_type(ls, i);
+        
+        switch (type)
+        {
+            case LUA_TSTRING:
+            {
+                printf("%d -> type : %s '%s'\n", i, lua_typename(ls, type), lua_tostring(ls, i));
+                break;
+            }
+                
+            case LUA_TBOOLEAN:
+            {
+                printf("%d -> type : %s '%s'\n", i, lua_typename(ls, type), lua_toboolean(ls, i) ? "true\n" : "false\n");
+                break;
+            }
+                
+            case LUA_TNUMBER:
+            {
+                printf("%d -> type : %s %g\n", i, lua_typename(ls, type), lua_tonumber(ls, i));
+                break;
+            }
+                
+            default:
+            {
+                printf("%d -> type : %s \n", i, lua_typename(ls, type));
+                break;
+            }
+        }
+    }
+    printf("\n/**** end dump lua stack ****/\n\n");
+}

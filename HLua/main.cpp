@@ -11,7 +11,7 @@
 
 int main(int argc, const char * argv[])
 {
-    // luaEnter();
-    DesignModelEnter();
+    luaEnter();
+    // DesignModelEnter();
     return 0;
 }

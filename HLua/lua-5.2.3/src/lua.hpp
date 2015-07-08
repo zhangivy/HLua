@@ -7,5 +7,6 @@ extern "C" {
 #include "lualib.h"
 #include "lauxlib.h"
 }
+#include "LUtils.h"
 
 #define stack_size printf("stack size : %d\n", lua_gettop(ls));

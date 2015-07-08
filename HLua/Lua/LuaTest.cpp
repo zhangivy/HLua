@@ -10,6 +10,8 @@
 #include <map>
 #include "LUtils.h"
 #include "Manual.h"
+#include "BindClass.h"
+#include "CppClass.h"
 
 using namespace std;
 
@@ -17,12 +19,17 @@ static const map<const char *, lua_register> registerConfig =
 {
     {"HW",luaopen_tt},
     {"LL",luaopen_mm},
+    {"cc",luaopen_student},
+    {"lq", luaopen_lq},
 };
 
 void DoFile(lua_State *L, string filename)
 {
     string path = "src/" + filename;
-    luaL_dofile(L, path.c_str());
+    if (luaL_dofile(L, path.c_str()))
+    {
+        printf("file : [%s] do failed! \n", path.c_str());
+    }
 }
 
 // about lua
@@ -42,10 +49,10 @@ void luaEnter()
     
     // 4. 运行文件
     DoFile(ls, "moddle.lua");
-    
+        
     // 调用lua 函数
-    // double result = 0;
-    // LUtils::callFunc(ls, "findyou", "dd>d", 5.6, 4.4, &result);
+//     double result = 0;
+//     LUtils::callFunc(ls, "findyou", "dd>d", 5.6, 4.4, &result);
     
     stack_size
     

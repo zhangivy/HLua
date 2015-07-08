@@ -22,7 +22,8 @@ public:
     static void callFunc(lua_State *ls, const char *func, const char *sig, ... );
     
     static void loadManaulLibrary(lua_State *ls, const std::map<const char *, lua_register> &registerConfig);
-
+    
+    static void stackDump(lua_State *ls);
 };
 
 #endif /* defined(__HLua__LUtils__) */

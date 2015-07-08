@@ -19,6 +19,7 @@
 		17633B861B3EA0F900E6292C /* Factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17633B841B3EA0F900E6292C /* Factory.cpp */; };
 		17633B921B3EAD1D00E6292C /* LuaTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17633B911B3EAD1D00E6292C /* LuaTest.cpp */; };
 		17633B941B3EBA4500E6292C /* DesignTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17633B931B3EBA4500E6292C /* DesignTest.cpp */; };
+		177636B11B4CC59700FD08E0 /* Student.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 177636AF1B4CC59700FD08E0 /* Student.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -61,6 +62,9 @@
 		17633B8B1B3EA23300E6292C /* DesignTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesignTest.h; sourceTree = "<group>"; };
 		17633B911B3EAD1D00E6292C /* LuaTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LuaTest.cpp; sourceTree = "<group>"; };
 		17633B931B3EBA4500E6292C /* DesignTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DesignTest.cpp; sourceTree = "<group>"; };
+		177636AF1B4CC59700FD08E0 /* Student.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Student.cpp; sourceTree = "<group>"; };
+		177636B01B4CC59700FD08E0 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		177636B51B4CC69B00FD08E0 /* CppClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CppClass.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,8 +161,11 @@
 		17633B801B3E8D7A00E6292C /* ManualClass */ = {
 			isa = PBXGroup;
 			children = (
+				177636B51B4CC69B00FD08E0 /* CppClass.h */,
 				17633B811B3E8D7A00E6292C /* BindClass.cpp */,
 				17633B821B3E8D7A00E6292C /* BindClass.h */,
+				177636AF1B4CC59700FD08E0 /* Student.cpp */,
+				177636B01B4CC59700FD08E0 /* Student.h */,
 			);
 			path = ManualClass;
 			sourceTree = "<group>";
@@ -220,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17633B7F1B3E8D2700E6292C /* Manual.cpp in Sources */,
+				177636B11B4CC59700FD08E0 /* Student.cpp in Sources */,
 				1757FC751B40EF2A004288B7 /* Strategy.cpp in Sources */,
 				17633B941B3EBA4500E6292C /* DesignTest.cpp in Sources */,
 				17633B921B3EAD1D00E6292C /* LuaTest.cpp in Sources */,
